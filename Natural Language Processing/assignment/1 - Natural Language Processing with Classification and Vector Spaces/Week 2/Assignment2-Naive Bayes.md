@@ -158,12 +158,14 @@ def train_naive_bayes(freqs,train_x,train_y):
 
 ```python
 def naive_bayes_predict(tweet,logprior,loglikelihood):
+  # 得到处理后的单词列表
   word_l=process_tweet(tweet)
   
   p=0
   
   p+=logprior
   
+  # 计算概率
   for word in word_l:
     if word in loglikelihood:
       p+=loglikelihood[word]
@@ -186,8 +188,10 @@ def test_naive_bayes(test_x,test_y,logprior,loglikelihood):
       
     y_hats.append(y_hat_i)
    
+  # 计算错误率
 	error=np.mean(np.absolute(y_hats-test_y))
-     
+    
+  # 计算准确率
   accuracy=1-errror
   
   return accuracy
@@ -207,6 +211,8 @@ def get_ratio(freqs,word):
   
   pos_neg_ratio['negative']=lookup(freqs,word,0)
   
+  # 计算比例
+  # ratio=（pos+1）/(neg+1)
   pos_neg_ratio['ratio']=(pos_neg_ratio['positive'] + 1)/(pos_neg_ratio['negative'] + 1)
   
   return pos_neg_ratio
@@ -223,6 +229,7 @@ def get_words_by_threshold(freqs,label,threshold):
     
     pos_neg_ratio=get_ratio(freqs,word)
     
+    # 通过阈值过滤
     if label==1 and pos_neg_ratio['ratio'] >=threshold:
       word_list[word] = pos_neg_ratio
 		elif label==0 and pos_neg_ratio['ratio'] <=threshold:
