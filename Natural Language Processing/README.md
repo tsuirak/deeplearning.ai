@@ -10,7 +10,8 @@
 
 - C：Course，代表第几门课
 - W：Week，代表第几周
-- L：Lecture，代表第几门教学
-- Assignment：代表课后习题
-- Original File：代表原课程的代码
+- L：Lecture，代表第几门教学代码
+- Assignment：代表课后习题代码
+- Labs：代笔实验代码，课后习题解答
+- Original：代表原课程的代码
 
