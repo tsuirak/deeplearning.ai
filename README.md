@@ -1,25 +1,28 @@
 # deeplearning.ai
 
 ## 简介
-吴恩达以及deeplearning.ai系列的课后作业
-本人借鉴了优秀的博客并且几乎全部手写代码
-有问题的可以在github/tsuiraku@126.com联系我
-### Machine Learning
+本仓库逐步更新整理AndrewNg以及deeplearning.ai的课后习题以及笔记
 
-机器学习 编程作业
+致力于帮助正在学习的同学
 
-### Deep Learning
+有各种问题欢迎联系我，或则在Issues里面提出
 
-深度学习 编程作业
+## 本仓库拟收录以下课程
 
-### TensorFlow in Practice
+- ##### Machine Learning
 
-tensorlow实践 编程作业
+- ##### Deep Learning Specialization
 
-### TensorFlow: Data and Deployment
+- ##### TensorFlow in Practice
 
-tensorlow数据/部署 编程作业
 
-### Natural Language Processing
+- ##### Natural Language Processing Specialization
 
-自然语言处理 编程作业
+- ##### TensorFlow:Data and Deployment
+
+## 联系方式
+
+邮箱：tsuiraku@126.com
+
+公众号：tsuiraku
+
