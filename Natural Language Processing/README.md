@@ -2,11 +2,13 @@
 
 ## 食用方法：
 
-- ##### 课程笔记已经汉化，请做好笔记！
+##### 1.课程笔记由本人汉化，建议下载本地使用[typora](https://www.typora.io/)打开*markdown*文件
 
-- ##### 观看[课程](https://www.coursera.org/specializations/natural-language-processing?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesNLPTopButton)为辅，课后练习为主！
+##### 2.课程原英文笔记[链接](https://github.com/ijelliti/Deeplearning.ai-Natural-Language-Processing-Specialization)
 
-## 英文意思：
+##### 3.观看[课程](https://www.coursera.org/specializations/natural-language-processing?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesNLPTopButton)为辅，课后编程练习为主
+
+## 英文符号含义：
 
 - ##### C：Course，代表第几门课
 
