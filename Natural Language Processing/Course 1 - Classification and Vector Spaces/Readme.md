@@ -10,7 +10,7 @@
 
   - [逻辑回归](#逻辑回归)
     
-    - [有监督学习 & 情感分析](#有监督学习 & 情感分析)
+    - [有监督学习&情感分析](#有监督学习 & 情感分析)
     - [特征提取](#特征提取)
     - [预处理](#预处理)
     - [训练逻辑回归模型](#训练逻辑回归模型)
@@ -76,7 +76,7 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 - 通过计算的损失值来更新参数，迭代重复至损失值为一个较理想的值
    - ![](Images/01.png)
 - 逻辑回归的函数为$$sigmoid$$函数
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/08.png)
+  - ![](Images/08.png)
 - 情感分析的有监督机器学习分类问题例子：
 > 目的是辨别$tweet$文本中的语句是积极的还是消极的情感
 >
@@ -85,7 +85,7 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 >        - $tweet$文本中带有积极正面情感标记为1，带有消极负面情感标记为0
 >     2. 训练逻辑回归分类器模型并减小损失值
 >     3. 预测
->  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/02.png)
+>  - ![](Images/02.png)
 
 ### 特征提取
   1. 稀疏矩阵表示
@@ -95,7 +95,7 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 
 - 利用稀疏矩阵存储，在$tweet$中出现的单词词汇表$$V$$将会赋予$1$，而未出现的单词赋予$0$
 
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/03.png)
+- ![](Images/03.png)
 
 - 稀疏矩阵存在的问题:
 
@@ -104,18 +104,18 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 - 耗费巨大的训练时间
 
 - 耗费巨大的预测时间
-- ![](./Images/04.png)
+- ![](Images/04.png)
 
   2. 分别统计消极负面和积极正面的频率
 
 - 从$tweet$语料库中不同的单词建立词汇库$V$
 - 建立两个类别，一个类别是消极负面情感，另一个类别是积极正面情感
 - 在词汇表$V$中计算积极单词的频率，需要统计它在积极正面的$tweet$文本中出现的次数，计算消极单词的频率一致
-   - ![05](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/05.png)
+   - ![05](Images/05.png)
 - 实际上在编码时，此表是一个字典，将单词及其对应的类别映射到频率，例如单词$I$，$(I,PosFreq):3,(I,NegFreq):3$
 - 使用字典提取有用的特征以进行情感分析，使用维度$=3$的向量表示$tweet$
    - 即：[偏置$=1$,$tweet$中不同单词的正频率总和, $tweet$中不同单词的负频率总和]
-   - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/06.png)
+   - ![](Images/06.png)
 
 ### 预处理
 - 使用词干化$$(stemming)$$以及停顿词$$(stop\space words)$$对文本进行预处理
@@ -135,7 +135,7 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 1. 首先，利用$$\theta$$和$$X_{val}$$，即$$pred=h(X_{val},\theta)$$,$h=sigmoid$函数
 2. 其次，评估$$pred$$是否大于等于阈值，通常阈值设置为$0.5$
 3. 最后在验证集上评估模型的准确率
-   - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/10.png)
+   - ![](Images/10.png)
 
 ### 损失函数
 - 变量$$m$$，代表了训练集中的训练样本数量，表示每次训练样本的总花费
@@ -143,36 +143,36 @@ c) Write a simple English to French translation algorithm using pre-computed wor
   - 左侧$$y^{(i)}*log h(x^{(i)},θ)$$是逻辑回归函数$$log(\hat{Y})$$应用到每一次训练样本$$y^{(i)}$$
   - 如果 $$y = 1$$ $$==> $$ $$L(\hat{Y},1)$$ $$=$$ $$ -log(\hat{Y})$$ $$==>$$ 我们想要$$\hat{Y}$$ 最大$$ ==>$$ $$\hat{Y}$$ 最大值为1
   - 如果 $$y = 0$$ $$==>$$ $$L(\hat{Y},0)$$ $$=$$ $$-log(1-\hat{Y})$$ $$==>$$ 我们想要 $$1-\hat{Y}$$ 最大 $$==>$$ $$\hat{Y}$$ 尽可能小，因为它只能取1
-    - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/11.png)
+    - ![](Images/11.png)
 
 ## 朴素贝叶斯
 ### 条件概率
 - 在$tweet$语料库中的句子可以被标记为正面或负面的情感，其中有些单词有时被标记为正面的，有时别标记为负面的
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/12.png)
+- ![](Images/12.png)
 - 假如$$A\space tweet$$被标记为正样本，$$A$$的概率为$$P$$，计算概率$$P$$的方法为正样本$tweet$的数目与语料库中所有的$tweet$样本的比值
 - 将概率视为事件发生的频率
 - $tweets$表达负面情绪的概率等于$1$减去正面情绪的概率
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/13.png)
+- ![](Images/13.png)
 - 条件概率是指$$B$$发生条件下$$A$$发生的概率，即$$P(A|B)$$
 ### 贝叶斯法则
 - 贝叶斯法则是指$$Y$$发生条件下$X$发生的概率，即$$P(X|Y)$$，等价于$$X$$发生条件下$Y$发生的概率乘以$$X$$和$$Y$$概率的比值，即$$P(Y|X)\times \frac{P(X)}{P(Y)}$$
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/14.png)
+- ![](Images/14.png)
 -  朴素贝叶斯的第一步是计算每个单词的条件概率，即$$P(w_i|class)$$
--  ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/15.png)
+-  ![](Images/15.png)
 ### 拉普拉斯平滑
 - 拉普拉斯平滑处理，一种用于避免出现概率为$0$的技巧
 - ![](Images/16.png)
 - 在上表应用此公式，概率总仍然为$1$，并且不会出现概率为$0$的情况
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/44.png)
+- ![](Images/44.png)
 ### 概率比值
 - 基于上一个表，概率比值被定义为正样本的条件概率除以负样本的条件概率，即$ratio(w_i)=\frac{P(w_i|Pos)}{P(w_i|Neg)}$
 - ![](Images/17.png)
 ### 似然乘以先验（Likelihood times prior）
 - Likelihood times prior 
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/18.png)
+- ![](Images/18.png)
 ### 对数似然+对数先验（Log Likelihood + log prior）
 - 为了避免数值下溢（因为我们连乘了许多小数），我们转化为对数似然，即将乘法转化为加法
-- ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/19.png)
+- ![](Images/19.png)
 - 如果对数似然+对数先验大于$0$，那么$tweet$带有积极含义，否则带有消极含义
 ### 训练朴素贝叶斯模型
 - 训练朴素贝叶斯模型，我们需要做以下几件事情：
@@ -193,18 +193,18 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 - 为了评估模型，我们将使用标注情感的$tweets$的测试集
 - 给出测试集$$X_{val}$$和$$Y_{val}$$，我们评估分数，即$X_{val},\lambda,logprior$的函数，预测为$pred=$分数
 - 准确率为：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/20.png)
+  - ![](Images/20.png)
 - 在训练集中没有训练过的单词被认为是中性，因此在分数上加上0
 ### 朴素贝叶斯的应用
 - 朴素贝叶斯有许多应用
   - 情感分析
-    - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/21.png)
+    - ![](Images/21.png)
   - 作者识别
     - ![](Images/22.png)
   - 垃圾邮件过滤
-    - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/23.png)
+    - ![](Images/23.png)
   - 信息检索
-    - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/24.png)
+    - ![](Images/24.png)
   - 单词歧义
     - 例如，我们无法确定银行**(bank)**是指河流**(river)**还是金融机构**(financial institution)**，计算比率
     - ![](Images/25.png)
@@ -228,7 +228,7 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 each word in the text
 - 向量空间模型将单词和文本存储为向量，通过识别周围的单词来获取相对的含义
 - 向量空间模型的主要用途是识别相似度和独立性
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/26.png)
+  - ![](Images/26.png)
 - 基本概念： "You shall know a word by the company it keeps." Firth,1957
 - 应用包括:
   - 信息提取
@@ -236,7 +236,7 @@ each word in the text
   - 聊天机器人
 ### 统计单词
 - 计算在一定距离$k$内两个单词出现的次数
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/27.png)
+  - ![](Images/27.png)
 ### 统计文本
 - 计算单词在某种类别中出现的次数
   - ![](Images/28.png)
@@ -247,12 +247,12 @@ each word in the text
 - 当语料库大小不同时，欧氏距离可能会产生误差
 ### 余弦相似度
 - 对于两个向量$$v,w$$，它们的夹角$$\beta$$的余弦由下面公式给出：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/30.png)
+  - ![](Images/30.png)
 - 余弦相似度的值介于0到1之间
 ### 向量空间中操作单词
 - 如果向量空间代表某种含义，那么我们可以进行如下操作
 - $$USA$$的首都是$$Washington$$，我们想要得到$$Russia$$的首都，即在向量空间中我们可以这样计算：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/31.png) 
+  - ![](Images/31.png) 
 ### 主成分分析
 -  可视化单词向量空间，可以将向量空间（在较高维度中）转换为2或3维空间，以便可以查看单词之间的关系
 - $PCA$在于将向量投影至低维度空间，并且尽可能的保留信息
@@ -263,21 +263,21 @@ each word in the text
     2. 计算协方差矩阵
     3. 执行奇异值分解，得到3个矩阵即$$V、\sigma、U$$
     4. 点积运算将不相关的特征数据，投影至$$k$$维度
-       - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/32.png) 
+       - ![](Images/32.png) 
     5. 计算保留方差的百分比：
-       - ![33](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/33.png)![](Images/33.png) 
+       - ![33](Images/33.png)![](Images/33.png) 
   - 特征值应按降序排序
 
 ## 单词翻译
 ### 搜索文本
 - 文本可以被表示为与单词具有相同维度的向量矩阵
 - 单词向量矩阵相加由下图所示
-  - ![43](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/43.png)![](Images/43.png)
+  - ![43](Images/43.png)![](Images/43.png)
 ### 转化单词向量
 - 为了将一种语言的单词向量$$X$$转化为另一种单词向量的$$Y$$，我们建立$$R$$矩阵，例如：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/34.png) 
+  - ![](Images/34.png) 
 - 为了求解$$R$$，我们利用梯度下降：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/35.png)
+  - ![](Images/35.png)
 ### K-近邻算法
 - 使用$$R$$将$$X$$翻译为$$Y$$，$$XR$$不对应$$Y$$中的任何特别的向量
 - $$KNN$$可以搜寻$$XR$$矩阵中最邻近的$$K$$个值
@@ -285,24 +285,24 @@ each word in the text
 - 哈希表可能会忽略一些邻近计算出的向量的值
 ### 哈希表和哈希函数
 - 哈希函数将对象映射到哈希表中的桶中
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/36.png)
+  - ![](Images/36.png)
 - 一个简单的哈希函数：哈希值 = 向量 % 哈希表中桶的个数
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/37.png)  
+  - ![](Images/37.png)  
 - 这个哈希函数不会将相似的对象存储于用一个桶中 ⇒ 局部哈希敏感
 ### 局部哈希敏感
 - 使用超平面分割空间
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/38.png)
+  - ![](Images/38.png)
 - 对于每个向量$$v$$，在超平面$$h_i$$上与法线向量进行$sign$运算
 - $sign$运算决定了向量在哪一个方向
 - 如果点积为正，$h_i=1$，否则$h_i=0$
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/39.png)
+  - ![](Images/39.png)
 - 哈希值为：
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/40.png)
+  - ![](Images/40.png)
 ### 接近最近邻搜索
 - 使用多组随机平面划分空间
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/41.png)
+  - ![](Images/41.png)
 - 每个划分将在计算向量的相同存储桶中给出（可能）不同向量
 - 那些不同的向量（来自多个划分）是成为$$k$$个最近邻居的良好候选者
-  - ![](/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing/Course 1 - Classification and Vector Spaces/Images/42.png)
+  - ![](Images/42.png)
 - 接近最近邻搜索不是最好的但是比单纯的搜索要快得多
 
