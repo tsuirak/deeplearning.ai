@@ -21,8 +21,8 @@
   - [贝叶斯法则](#贝叶斯法则)
     - [拉普拉斯平滑](#拉普拉斯平滑处理)
     - [概率比值](#概率比值)
-    - [似然乘以先验](#似然乘以先验（Likelihood times prior）)
-    - [对数似然 + 对数先验](#对数似然+对数先验（Log Likelihood + log prior）)
+    - [Likelihood times prior](#Likelihood times prior)
+    - [Log Likelihood + log prior](#Log Likelihood + log prior)
     - [训练朴素贝叶斯模型](#训练朴素贝叶斯模型)
     - [测试朴素贝叶斯模型](#测试朴素贝叶斯模型)
     - [朴素贝叶斯模型的应用](#朴素贝叶斯模型的应用)
@@ -165,10 +165,10 @@ c) Write a simple English to French translation algorithm using pre-computed wor
 ### 概率比值
 - 基于上一个表，概率比值被定义为正样本的条件概率除以负样本的条件概率，即$ratio(w_i)=\frac{P(w_i|Pos)}{P(w_i|Neg)}$
 - ![](Images/17.png)
-### 似然乘以先验（Likelihood times prior）
+### Likelihood times prior
 - Likelihood times prior 
 - ![](Images/18.png)
-### 对数似然+对数先验（Log Likelihood + log prior）
+### Log Likelihood + log prior
 - 为了避免数值下溢（因为我们连乘了许多小数），我们转化为对数似然，即将乘法转化为加法
 - ![](Images/19.png)
 - 如果对数似然+对数先验大于$0$，那么$tweet$带有积极含义，否则带有消极含义
