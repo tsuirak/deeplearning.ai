@@ -1,3 +1,5 @@
+![image1](Image/image1.jpeg)
+
 # Natural Language Processing Specialization
 
 ## 食用方法：
