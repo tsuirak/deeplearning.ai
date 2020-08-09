@@ -1,4 +1,4 @@
-![](https://media-exp1.licdn.com/dms/image/C5622AQE93SfLu9WSeA/feedshare-shrink_2048_1536/0?e=1596672000&v=beta&t=m7lKkARJn-DdgMEsTXkvER982QE2wualiIJOiFnK584)
+![45](Images/45.jpeg)
 # 借助分类和词向量做自然语言处理
 
 欢迎来到由 [DeepLearning.ai](http://deeplearning.ai/)提供的自然语言处理专项的第一门[课程](https://www.coursera.org/learn/classification-vector-spaces-in-nlp)。这门课由Younes Bensouda Mourri，Łukasz Kaiser和Eddy Shyu讲授。
