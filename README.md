@@ -24,9 +24,5 @@
 
 ##### 邮箱：tsuiraku@126.com
 
-##### 公众号：tsuiraku
-
-##### 注：公众号第一批准备更新李航老师的统计学习方法，正在逐步更新中
-
-[统计学习方法链接](https://github.com/tsuirak/Statistical-Learning-Methods-lihang)
+###### 若对统计学习方法中的算法感兴趣的话，欢迎访问[统计学习方法](https://github.com/tsuirak/Statistical-Learning-Methods-lihang)
 
