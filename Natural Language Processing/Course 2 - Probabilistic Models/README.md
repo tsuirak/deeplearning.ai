@@ -1,4 +1,4 @@
-![](https://media-exp1.licdn.com/dms/image/C5622AQF9qTj2PByLAg/feedshare-shrink_2048_1536/0?e=1596672000&v=beta&t=Am-NSJSAH7TEqR8xwHLcF7aqupXzGIOZpdNv4Pw2RwU)
+![62](Images/62.jpeg)
 
 # 借助概率模型做自然语言处理
 
