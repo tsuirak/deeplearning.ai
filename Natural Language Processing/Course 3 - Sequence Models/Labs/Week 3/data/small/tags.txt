@@ -1,9 +1,0 @@
-O
-B-geo
-B-gpe
-B-per
-I-geo
-B-org
-I-org
-B-tim
-I-per
