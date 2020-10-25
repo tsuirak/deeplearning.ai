@@ -1,6 +1,6 @@
 # deeplearning.ai
 
-<img src="Images/deeplearning-ai-icon.png" alt="deeplearning-ai-icon" style="zoom:30%;" />
+<img src="Images/deeplearning-ai-icon.png" alt="deeplearning-ai-icon" style="zoom:20%;" />
 
 
 
