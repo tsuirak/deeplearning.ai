@@ -16,9 +16,9 @@
 
 ## 本仓库收录以下课程
 
-- [DeepLearning.AI TensorFlow Developer ]()
-- [Natural Language Processing Specialization]()
-- [Generative Adversarial Networks Specialization]()
+- [DeepLearning.AI TensorFlow Developer ](https://github.com/tsuirak/deeplearning.ai/tree/master/DeepLearning.AI%20TensorFlow%20Developer%20)
+- [Natural Language Processing Specialization](https://github.com/tsuirak/deeplearning.ai/tree/master/Natural%20Language%20Processing%20Specialization)
+- [Generative Adversarial Networks Specialization](https://github.com/tsuirak/deeplearning.ai/tree/master/Generative%20Adversarial%20Networks%20Specialization)
 
 ## 联系方式
 
