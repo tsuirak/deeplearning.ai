@@ -44,7 +44,7 @@
 
   - [Natural Language Processing with Sequence Models](https://www.coursera.org/learn/sequence-models-in-nlp)
 
-     <img src="/Users/nanase/Documents/GitHub/deeplearning.ai/Natural Language Processing Specialization/Images/sm.png" alt="sm" style="zoom:50%;" />
+     <img src="Images/sm.png" alt="sm" style="zoom:50%;" />
 
   - [Natural Language Processing with Attention Models](https://www.coursera.org/learn/attention-models-in-nlp)<img src="Images/am.png" alt="am" style="zoom:50%;" />
 
