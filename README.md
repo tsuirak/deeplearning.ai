@@ -20,6 +20,16 @@
 - [Natural Language Processing Specialization](https://github.com/tsuirak/deeplearning.ai/tree/master/Natural%20Language%20Processing%20Specialization)
 - [Generative Adversarial Networks Specialization](https://github.com/tsuirak/deeplearning.ai/tree/master/Generative%20Adversarial%20Networks%20Specialization)
 
+
+
+## 备注
+
+当前文件已经拥有的数据文件打包：
+
+数据文件：[datasets]( https://pan.baidu.com/s/1H9enlK-Uz0eUUrqwFhVw1A )    
+
+提取码: q9cv
+
 ## 联系方式
 
 - 邮箱：tsuiraku@126.com
